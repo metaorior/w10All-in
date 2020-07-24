@@ -16,12 +16,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\DesktopBackground\Shell\Display\command]
 "DelegateExecute"="{556FF0D6-A1EE-49E5-9FA4-90AE116AD744}"
 
-
-
-;Add creation of Batch .cmd
-[HKEY_CLASSES_ROOT\.cmd\ShellNew]
-"NullFile"=""
-
 ;Disable Administrative Shares.
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
 "AutoShareServer"=dword:00000000
@@ -136,78 +130,77 @@ Windows Registry Editor Version 5.00
 "ThresholdFlightsDisabled"=dword:00000001
 "Ring"="Disabled"
 
-; -----
 
-;;; Turn off "File Explorer ads"
+; Turn off "File Explorer ads"
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "ShowSyncProviderNotifications"=dword:0000000
 
-;;; Turn off "Start Menu suggestions"
+; Turn off "Start Menu suggestions"
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "SystemPaneSuggestionsEnabled"=dword:0000000
 "SubscribedContent-338388Enabled"=dword:0000000
 
-;;; Turn off "Get tips, tricks and suggestions as you use Windows"
+; Turn off "Get tips, tricks and suggestions as you use Windows"
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "SoftLandingEnabled"=dword:0000000
 "SubscribedContent-338389Enabled"=dword:0000000
 
-;;; Turn off "AutoPlay"
+; Turn off "AutoPlay"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers]
 ; 0000000 = Off (Default)
 ; 0000001 = On (Secure)
 "DisableAutoplay"=dword:0000001
 
-;;; Turn on "Let Windows track app launches"
+; Turn on "Let Windows track app launches"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Start_TrackProgs"=dword:0000000
 
-;;; Turn off "Let apps share and sync with wireless devices"
+; Turn off "Let apps share and sync with wireless devices"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\DeviceAccess\Global\LooselyCoupled]
 ; Deny = Denied to share and sync (Secure & Default)
 ; Allow = Allowed to share and sync
 "Value"="Deny"
 
-;;; Turn off "Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what’s new and suggested"
+; Turn off "Show me the Windows welcome experience after updates and occasionally when I sign in to highlight what’s new and suggested"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "SubscribedContent-310093Enabled"=dword:0000000
 
-;;; Turn off "Tailored experiences with diagnostic data"
+; Turn off "Tailored experiences with diagnostic data"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Privacy]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "TailoredExperiencesWithDiagnosticDataEnabled"=dword:0000000
 
-;;; Turn off (set to Never) "Feedback Frequency"
+; Turn off (set to Never) "Feedback Frequency"
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Siuf\Rules]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "NumberOfSIUFInPeriod"=dword:0000000
 "PeriodInNanoSeconds"=dword:0000000
 
-;;; Turn on (set to Warning) "SmartScreen for Microsoft Edge"
+; Turn on (set to Warning) "SmartScreen for Microsoft Edge"
 [HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\PhishingFilter]
 ; 0000000 = Off
 ; 0000001 = On (Secure & Default)
 "EnabledV9"=dword:0000000
 
-;;; Turn on (set to Warning) "SmartScreen for Windows Store apps"
+; Turn on (set to Warning) "SmartScreen for Windows Store apps"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\AppHost]
 ; 0000000 = Off
 ; 0000001 = On (Secure & Default)
 "EnableWebContentEvaluation"=dword:0000000
 
-;;; Turn on override prevention "SmartScreen for Windows Store apps"
+; Turn on override prevention "SmartScreen for Windows Store apps"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\AppHost]
 ; 0000000 = Off (Default)
 ; 0000001 = On (Secure)
@@ -215,13 +208,13 @@ Windows Registry Editor Version 5.00
 
 ;--
 
-;;; Turn on "File extensions for known file types"
+; Turn on "File extensions for known file types"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "HideFileExt"=dword:0000000
 
-;;; Set to "My devices only" for Nearby sharing: "I can share and receive from"
+; Set to "My devices only" for Nearby sharing: "I can share and receive from"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\CDP]
 ; 0000000 = Off (Secure, Default)
 ; 0000001 = My devices only
@@ -230,68 +223,68 @@ Windows Registry Editor Version 5.00
 
 
 
-;;; Turn off "Sync your settings: Ease of Access"
+; Turn off "Sync your settings: Ease of Access"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Accessibility]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Sync your settings: Internet Explorer settings"
+; Turn off "Sync your settings: Internet Explorer settings"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\BrowserSettings]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Sync your settings: Passwords"
+; Turn off "Sync your settings: Passwords"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Credentials]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Sync your settings: Language preferences"
+; Turn off "Sync your settings: Language preferences"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Language]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Sync your settings: Theme"
+; Turn off "Sync your settings: Theme"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Personalization]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Sync your settings: Other Windows settings"
+; Turn off "Sync your settings: Other Windows settings"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\SettingSync\Groups\Windows]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Turn off "Let Cortana respond to "Hey Cortana""
+; Turn off "Let Cortana respond to "Hey Cortana""
 [HKEY_CURRENT_USER\Software\Microsoft\Speech_OneCore\Preferences]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "VoiceActivationOn"=dword:0000000
 
-;;; Turn on "Let Cortana listen for my commands when I press the Windows logo key + C"
+; Turn on "Let Cortana listen for my commands when I press the Windows logo key + C"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "VoiceShortcut"=dword:0000000
 
-;;; Turn off "Use Cortana even when my device is locked"
+; Turn off "Use Cortana even when my device is locked"
 [HKEY_CURRENT_USER\Software\Microsoft\Speech_OneCore\Preferences]
 ; 0000000 = Off (Secure & Default)
 ; 0000001 = On
 "VoiceActivationEnableAboveLockscreen"=dword:0000000
 
-;;; Disable Clipboard History Feature
+; Disable Clipboard History Feature
 [HKEY_CURRENT_USER\Software\Microsoft\Clipboard]
 ; <deleted> = (Default)
 ; 0000000 = Off (Secure)
 ; 0000001 = On
 "EnableClipboardHistory"=dword:0000000
 
-;;; Disable Clipboard Cloud Sync Feature
+; Disable Clipboard Cloud Sync Feature
 [HKEY_CURRENT_USER\Software\Microsoft\Clipboard]
 ; <deleted> = (Default)
 ; 0000000 = Off (Secure)
@@ -299,7 +292,7 @@ Windows Registry Editor Version 5.00
 "EnableCloudClipboard"=dword:0000000
 "CloudClipboardAutomaticUpload"=dword:0000000
 
-;;; Turn off "Automatic installation apps"
+; Turn off "Automatic installation apps"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
@@ -312,7 +305,7 @@ Windows Registry Editor Version 5.00
 
 ;---
 
-;;; 2.3.1.2 (L1) Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'
+; 2.3.1.2 (L1) Ensure 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
 ; <deleted> = (Default)
 ; 0000000 = This policy is disabled
@@ -321,7 +314,7 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "NoConnectedUser"=dword:0000003
 
-;;; 2.3.4.1 (L1) Ensure 'Devices: Allowed to format and eject removable media' is set to 'Administrators and Interactive Users'
+; 2.3.4.1 (L1) Ensure 'Devices: Allowed to format and eject removable media' is set to 'Administrators and Interactive Users'
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon]
 ; <deleted> = (Default)
 ; 0000000 = Administrators only
@@ -329,14 +322,14 @@ Windows Registry Editor Version 5.00
 ; 0000002 = Administrators and interactive users (CIS)
 "AllocateDASD"="2"
 
-;;; 18.4.8.1 (L1) Ensure 'Enable insecure guest logons' is set to 'Disabled'
+; 18.4.8.1 (L1) Ensure 'Enable insecure guest logons' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation]
 ; <deleted> = (Default)
 ; 0 = Off (CIS L1)
 ; 1 = On
 "AllowInsecureGuestAuth"=dword:0000000
 
-;;; 18.9.6.1 (L1) Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'
+; 18.9.6.1 (L1) Ensure 'Allow Microsoft accounts to be optional' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\System]
 ; <deleted> = (Default)
 ; 0 = Off
@@ -344,7 +337,7 @@ Windows Registry Editor Version 5.00
 ; NON-EXISTENCE DUE TO WINDOWS 10 HOME USE
 "MSAOptional"=dword:0000001
 
-;;; 18.9.8.1 (L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'
+; 18.9.8.1 (L1) Ensure 'Disallow Autoplay for non-volume devices' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Explorer]
 ; <deleted> = (Default)
 ; 0 = Off
@@ -352,7 +345,7 @@ Windows Registry Editor Version 5.00
 ; NON-EXISTENCE DUE TO WINDOWS 10 HOME USE
 "NoAutoplayfornonVolume"=dword:0000001
 
-;;; 18.9.16.1 (L1) Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]'
+; 18.9.16.1 (L1) Ensure 'Allow Telemetry' is set to 'Enabled: 0 - Security [Enterprise Only]'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\DataCollection]
 ; <deleted> = (Default)
 ; 0 = Security: Security data only (CIS L1)
@@ -361,7 +354,7 @@ Windows Registry Editor Version 5.00
 ; 3 = Full: Enhanced + full diagnostics data
 "AllowTelemetry"=dword:0000000
 
-;;; 18.9.16.3 (L1) Ensure 'Do not show feedback notifications' is set to 'Enabled'
+; 18.9.16.3 (L1) Ensure 'Do not show feedback notifications' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\DataCollection]
 ; <deleted> = (Default)
 ; 0 = Off
@@ -521,7 +514,7 @@ Windows Registry Editor Version 5.00
 
 ;------
 
-;;; Startup and Recovery - Debug Information: None
+; Startup and Recovery - Debug Information: None
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
 "AutoReboot"=dword:0000001						; Default: 1
 "LogEvent"=dword:0000001						; Default: 1
@@ -530,7 +523,7 @@ Windows Registry Editor Version 5.00
 "CrashDumpEnabled"=dword:0000000				; Default: 1
 "AlwaysKeepMemoryDump"=dword:0000000			; Default: 1
 
-;;; Remote Assistance: Disable
+; Remote Assistance: Disable
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Remote Assistance]
 "CreateEncryptedOnlyTickets"=dword:0000001		; Default: 0
 "fAllowFullControl"=dword:0000001				; Default: 1
@@ -541,19 +534,19 @@ Windows Registry Editor Version 5.00
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server] 
 "fDenyTSConnections"=dword:00000001
 
-;;; Find my device: Off
+; Find my device: Off
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Settings\FindMyDevice]
 ; 0000000 = Off (Default)
 ; 0000001 = On (Secure)
 "LocationSyncEnabled"=dword:0000000
 
-;;; App Advertising ID: Off
+; App Advertising ID: Off
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "Enabled"=dword:0000000
 
-;;; Project to this PC: Off
+; Project to this PC: Off
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MiracastReceiver]
 "NetworkQualificationEnabled"=dword:0000000		; Default: 0000001
 "ConsentToast"=dword:0000002					; Default: 0000000
@@ -566,46 +559,46 @@ Windows Registry Editor Version 5.00
 ; 0000001 = On (Default)
 "AutoEnabled"=dword:0000000
 
-;;; Hotspots 2.0 networks: Off
+; Hotspots 2.0 networks: Off
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WlanSvc\AnqpCache]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "OsuRegistrationStatus"=dword:0000000
 
-;;; SmartScreen Apps and Files: Warn
+; SmartScreen Apps and Files: Warn
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer]
 ; Block = Block execution/opening (Secure)
 ; Warn = Warn before execution/opening (Default)
 ; Off = Turn off
 "SmartScreenEnabled"="Warn"
 
-;;; LMHOSTS lookup: Off
+; LMHOSTS lookup: Off
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NetBT\Parameters]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "EnableLMHOSTS"=dword:0000000
 
-;;; Windows Error Reporting: Off
+; Windows Error Reporting: Off
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
 ; 0000000 = Off (Default)
 ; 0000001 = On (Secure)
 "Disabled"=dword:0000000
 
 
-;;; Disable Fast Restart(Hibernate/Sleep instead of shutting down) to prevent disk encryption errors with third party tools
+; Disable Fast Restart(Hibernate/Sleep instead of shutting down) to prevent disk encryption errors with third party tools
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power]
 ; 0000000 = Off (Secure)
 ; 0000001 = On (Default)
 "HiberbootEnabled"=dword:0000000
 
-;;; Disable Clipboard History capability
+; Disable Clipboard History capability
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 ; <deleted> = (Default)
 ; 0000000 = Off (Secure)
 ; 0000001 = On
 "AllowClipboardHistory"=dword:0000000
 
-;;; (CIS-1709): 18.8.26.1 (L1) Ensure 'Untrusted Font Blocking' is set to 'Enabled: Block untrusted fonts and log events'
+; (CIS-1709): 18.8.26.1 (L1) Ensure 'Untrusted Font Blocking' is set to 'Enabled: Block untrusted fonts and log events'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\MitigationOptions]
 ; <deleted> = (Default)
 ; 00,10,a5,d4,e8,00,00,00 (1000000000000) = Block untrusted fonts and log events (CIS)
@@ -613,7 +606,7 @@ Windows Registry Editor Version 5.00
 ; 00,30,ef,7d,ba,02,00,00 (3000000000000) = Log events without blocking untrusted fonts
 "MitigationOptions_FontBocking"=hex(b):00,10,a5,d4,e8,00,00,00
 
-;;; 18.1.1.1 (L1) Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'
+; 18.1.1.1 (L1) Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Personalization]
 ; <deleted> = (Default)
 ; 0000000 = Off
@@ -621,28 +614,28 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "NoLockScreenCamera"=dword:0000001
 
-;;; 18.1.3 (L2) Ensure 'Allow Online Tips' is set to 'Disabled'
+; 18.1.3 (L2) Ensure 'Allow Online Tips' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "AllowOnlineTips"=dword:0000000
 
-;;; 18.3.3 (L1) Ensure 'Configure SMB v1 server' is set to 'Disabled'
+; 18.3.3 (L1) Ensure 'Configure SMB v1 server' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters]
 ; <deleted> = Default
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "SMB1"=dword:0000000
 
-;;; 18.3.4 (L1) Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'
+; 18.3.4 (L1) Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\kernel]
 ; <deleted> = Default
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "DisableExceptionChainValidation"=dword:0000000
 
-;;; 18.4.2 (L1) Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
+; 18.4.2 (L1) Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip6\Parameters]
 ; <deleted> = (Default)
 ; 0000000 = No additional protection, source routed packets are allowed
@@ -650,7 +643,7 @@ Windows Registry Editor Version 5.00
 ; 0000002 = Highest protection, source routing is completely disabled (CIS)
 "DisableIPSourceRouting"=dword:0000002
 
-;;; 18.4.3 (L1) Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
+; 18.4.3 (L1) Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
 [HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters]
 ; <deleted> = (Default)
 ; 0000000 = No additional protection, source routed packets are allowed
@@ -658,28 +651,28 @@ Windows Registry Editor Version 5.00
 ; 0000002 = Highest protection, source routing is completely disabled (CIS)
 "DisableIPSourceRouting"=dword:0000002
 
-;;; 18.4.9 (L1) Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'
+; 18.4.9 (L1) Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (Default / CIS)
 "SafeDllSearchMode"=dword:0000001
 
-;;; 18.5.5.1 (L2) Ensure 'Enable Font Providers' is set to 'Disabled'
+; 18.5.5.1 (L2) Ensure 'Enable Font Providers' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "EnableFontProviders"=dword:0000000
 
-;;; 18.5.10.2 (L2) Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
+; 18.5.10.2 (L2) Ensure 'Turn off Microsoft Peer-to-Peer Networking Services' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Peernet]
 ; 0000000 = Off (Default)
 ; 0000001 = On (CIS)
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "Disabled"=dword:0000001
 
-;;; 18.5.19.2.1 (L2) Disable IPv6 (Ensure TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)')
+; 18.5.19.2.1 (L2) Disable IPv6 (Ensure TCPIP6 Parameter 'DisabledComponents' is set to '0xff (255)')
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\TCPIP6\Parameters]
 ; <deleted> = (Default)
 ; 0000000 = Enable all IPv6 components
@@ -695,21 +688,21 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "DisabledComponents"=dword:0000xff
 
-;;; 18.8.22.1.3 (L2) Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'
+; 18.8.22.1.3 (L2) Ensure 'Turn off handwriting personalization data sharing' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\TabletPC]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "PreventHandwritingDataSharing"=dword:0000001
 
-;;; 18.8.22.1.4 (L2) Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'
+; 18.8.22.1.4 (L2) Ensure 'Turn off handwriting recognition error reporting' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\HandwritingErrorReports]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "PreventHandwritingErrorReports"=dword:0000001
 
-;;; 18.8.22.1.10 (L2) Ensure 'Turn off the "Order Prints" picture task' is set to 'Enabled'
+; 18.8.22.1.10 (L2) Ensure 'Turn off the "Order Prints" picture task' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ; <deleted> = (Default)
 ; 0000000 = Off
@@ -717,7 +710,7 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "NoOnlinePrintsWizard"=dword:0000001
 
-;;; 18.8.22.1.11 (L2) Ensure 'Turn off the "Publish to Web" task for files and folders' is set to 'Enabled'
+; 18.8.22.1.11 (L2) Ensure 'Turn off the "Publish to Web" task for files and folders' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 ; <deleted> = (Default)
 ; 0000000 = Off
@@ -725,14 +718,14 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "NoPublishingWizard"=dword:0000001
 
-;;; 18.8.22.1.13 (L2) Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'
+; 18.8.22.1.13 (L2) Ensure 'Turn off Windows Customer Experience Improvement Program' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SQMClient\Windows]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "CEIPEnable"=dword:0000000
 
-;;; 18.8.22.1.14 (L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled'
+; 18.8.22.1.14 (L2) Ensure 'Turn off Windows Error Reporting' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Windows Error Reporting]
 ; <deleted> = (Default)
 ; 0000000 = Off
@@ -744,7 +737,7 @@ Windows Registry Editor Version 5.00
 ; 0000001 = On
 "DoReport"=dword:0000000
 
-;;; 18.8.30.1 (L2) Ensure 'Allow upload of User Activities' is set to 'Disabled'
+; 18.8.30.1 (L2) Ensure 'Allow upload of User Activities' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
@@ -752,77 +745,77 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "UploadUserActivities"=dword:0000000
 
-;;; 18.8.35.1 (L1) Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'
+; 18.8.35.1 (L1) Ensure 'Configure Offer Remote Assistance' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\Software\policies\Microsoft\Windows NT\Terminal Services]
 ; <deleted> = (Default)
 ; 0000000 = Off (Default / CIS)
 ; 0000001 = On
 "fAllowUnsolicited"=dword:0000000
 
-;;; 18.9.10.1.1 (L1) Ensure 'Configure enhanced anti-spoofing' is set to 'Enabled'
+; 18.9.10.1.1 (L1) Ensure 'Configure enhanced anti-spoofing' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Biometrics\FacialFeatures]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "EnhancedAntiSpoofing"=dword:0000001
 
-;;; 18.9.30.2 (L1) Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'
+; 18.9.30.2 (L1) Ensure 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Explorer]
 ; <deleted> = (Default)
 ; 0000000 = Off (Default / CIS)
 ; 0000001 = On
 "NoDataExecutionPrevention"=dword:0000000
 
-;;; 18.9.45.2 (L2) Ensure 'Allow Adobe Flash' is set to 'Disabled'
+; 18.9.45.2 (L2) Ensure 'Allow Adobe Flash' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Addons]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
 ; 0000001 = On
 "FlashPlayerEnabled"=dword:0000000
 
-;;; 18.9.45.10 (L2) Ensure 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled'
+; 18.9.45.10 (L2) Ensure 'Prevent using Localhost IP address for WebRTC' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\Main]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "HideLocalHostIP"=dword:0000001
 
-;;; 18.9.58.3.2.1 (L2) Ensure 'Allow users to connect remotely by using Remote Desktop Services' is set to 'Disabled'
+; 18.9.58.3.2.1 (L2) Ensure 'Allow users to connect remotely by using Remote Desktop Services' is set to 'Disabled'
 [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server]
 ; 0000000 = Off (CIS)
 ; 0000001 = On (Default)
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "fDenyTSConnections"=dword:0000001
 
-;;; 18.9.58.3.3.1 (L2) Ensure 'Do not allow COM port redirection' is set to 'Enabled'
+; 18.9.58.3.3.1 (L2) Ensure 'Do not allow COM port redirection' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "fDisableCcm"=dword:0000001
 
-;;; 18.9.58.3.3.2 (L1) Ensure 'Do not allow drive redirection' is set to 'Enabled'
+; 18.9.58.3.3.2 (L1) Ensure 'Do not allow drive redirection' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "fDisableCdm"=dword:0000001
 
-;;; 18.9.58.3.3.3 (L2) Ensure 'Do not allow LPT port redirection' is set to 'Enabled'
+; 18.9.58.3.3.3 (L2) Ensure 'Do not allow LPT port redirection' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "fDisableLPT"=dword:0000001
 
-;;; 18.9.58.3.3.4 (L2) Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'
+; 18.9.58.3.3.4 (L2) Ensure 'Do not allow supported Plug and Play device redirection' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "fDisablePNPRedir"=dword:0000001
 
-;;; 18.9.60.2 (L2) Ensure 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search'
+; 18.9.60.2 (L2) Ensure 'Allow Cloud Search' is set to 'Enabled: Disable Cloud Search'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
 ; <deleted> = (Default)
 ; 0000000 = Off (CIS)
@@ -830,14 +823,14 @@ Windows Registry Editor Version 5.00
 ; NON-COMPLIANCE TO NOT DISRUPT COMMON HOME FEATURES
 "AllowCloudSearch"=dword:0000000
 
-;;; 18.9.80.2.2 (L1) Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for files' is set to 'Enabled'
+; 18.9.80.2.2 (L1) Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for files' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
 ; <deleted> = (Default)
 ; 0000000 = Off
 ; 0000001 = On (CIS)
 "PreventOverrideAppRepUnknown"=dword:0000001
 
-;;; 18.9.80.2.3 (L1) Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled'
+; 18.9.80.2.3 (L1) Ensure 'Prevent bypassing Windows Defender SmartScreen prompts for sites' is set to 'Enabled'
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter]
 ; <deleted> = (Default)
 ; 0000000 = Off
@@ -845,7 +838,6 @@ Windows Registry Editor Version 5.00
 "PreventOverride"=dword:0000001
 
 ; Unlock hidden power settings
-Windows Registry Editor Version 5.00
 
 ; After rebooting you can see 3 new options under Settings > System > Power & sleep > Additional power settings > Change plan settings > Change advanced power settings > Processor power management Processor energy performance preference policy Processor performance autonomous mode Processor autonomous activity window
 ; To setup Speed Shift with Intel default values change "Processor energy performance preference policy" to 50 and "Processor autonomous activity window" to 0 or disable Speed Shift with "Processor performance autonomous mode".
@@ -865,7 +857,6 @@ Windows Registry Editor Version 5.00
 "Attributes"=dword:00000002
  
 ; unhide control panel  items 
-Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "DisallowCpl"=-
@@ -874,7 +865,6 @@ Windows Registry Editor Version 5.00
 
 
 ; remove gamebar
-Windows Registry Editor Version 5.00
 
 ; Created by: Shawn Brink
 ; Created on: March 28th 2016
@@ -888,7 +878,6 @@ Windows Registry Editor Version 5.00
 "GameDVR_Enabled"=dword:00000000
 
 ; supress notifications 
-Windows Registry Editor Version 5.00
 
 ; http://www.ghacks.net/2016/08/05/manage-windows-defender-notifications/
 [HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\UX Configuration]
@@ -896,8 +885,6 @@ Windows Registry Editor Version 5.00
 
 ; remove "some settings are managed by your company"
 
-Windows Registry Editor Version 5.00
-# Script from https://appuals.com/how-to-fix-some-settings-are-managed-by-your-organization/
 
 [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\ActiveDesktop]
 "NoChangingWallpaper"=-
