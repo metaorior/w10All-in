@@ -206,7 +206,6 @@ Windows Registry Editor Version 5.00
 ; 0000001 = On (Secure)
 "PreventOverride"=dword:0000000
 
-;--
 
 ; Turn on "File extensions for known file types"
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
@@ -861,9 +860,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer]
 "DisallowCpl"=-
 
-[-HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer\DisallowCpl]
-
-
 ; remove gamebar
 
 ; Created by: Shawn Brink
@@ -1352,7 +1348,6 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Drive\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
 
-
 [HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2]
 @="@shell32.dll,-8506"
 "Extended"=-
@@ -1361,3 +1356,45 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\LibraryFolder\Background\shell\cmd2\command]
 @="cmd.exe /s /k pushd \"%V\""
+
+; fix check box and explorer issues after optimizing :D
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_SearchFiles"=dword:00000002
+"Hidden"=dword:00000001
+"HideFileExt"=dword:00000000
+"Start_TrackProgs"=dword:00000000
+"EnableXamlStartMenu"=dword:00000000
+"HideDrivesWithNoMedia"=dword:00000000
+"TaskbarGlomming"=dword:00000000
+"Start_ShowMyGames"=dword:00000000
+"Start_ShowHelp"=dword:00000000
+"ShowSyncProviderNotifications"=dword:00000000
+"LaunchTo"=dword:00000001
+"AutoCheckSelect"=dword:00000000
+"ShowStatusBar"=dword:00000001
+"ServerAdminUI"=dword:00000000
+"ShowCompColor"=dword:00000001
+"DontPrettyPath"=dword:00000000
+"ShowInfoTip"=dword:00000001
+"HideIcons"=dword:00000000
+"MapNetDrvBtn"=dword:00000000
+"WebView"=dword:00000001
+"Filter"=dword:00000000
+"ShowSuperHidden"=dword:00000000
+"SeparateProcess"=dword:00000000
+"IconsOnly"=dword:00000000
+"ShowTypeOverlay"=dword:00000001
+"StoreAppsOnTaskbar"=dword:00000001
+"ListviewAlphaSelect"=dword:00000001
+"ListviewShadow"=dword:00000001
+"TaskbarAnimations"=dword:00000001
+"StartMenuInit"=dword:0000000d
+"TaskbarStateLastRun"=hex:03,9d,56,5e,00,00,00,00
+"ReindexedProfile"=dword:00000001
+"ShowTaskViewButton"=dword:00000000
+"Start_SearchPrograms"=dword:00000001
+"Start_PowerButtonAction"=dword:00000002
+"TaskbarSmallIcons"=dword:00000001
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People]
